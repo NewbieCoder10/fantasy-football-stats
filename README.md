@@ -1,6 +1,4 @@
-# Fantasy Football Stats
-
-## Introduction
+## Introduction - An introduction to this app is that, it will allow users to 
 
 ## Overview
 
