@@ -11,10 +11,11 @@ This is intended for users that may use fantasy football, and also
 just a general overview of player statistics if they are interested in
 looking them up.
 
+[User stories](docs/user-stories.md)
+
 ## First milestone
 
 * [ ] Description
-* [ ] Intended Users
+* [x] Intended Users & amp; user stories
 * [ ] Entity-relationship diagrams (ERD)
 * [ ] Wireframes
-* [ ] User stories 
