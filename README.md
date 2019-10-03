@@ -15,7 +15,7 @@ looking them up.
 
 #### [Entity Relationship Diagram](docs/erd.md)
 
-#### [Wireframe Diagram] (docs/wireframe.md)
+#### [Wireframe Diagram](docs/wireframe.md)
 
 ## First milestone
 
