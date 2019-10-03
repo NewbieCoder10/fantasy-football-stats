@@ -11,13 +11,15 @@ This is intended for users that may use fantasy football, and also
 just a general overview of player statistics if they are interested in
 looking them up.
 
-* [User stories](docs/user-stories.md)
+#### [User stories](docs/user-stories.md)
 
-* [Entity Relationship Diagram](docs/erd.md)
+#### [Entity Relationship Diagram](docs/erd.md)
+
+#### [Wireframe Diagram] (docs/wireframe.md)
 
 ## First milestone
 
-* [ ] Description
+* [x] Description
 * [x] Intended Users & amp; user stories
-* [ ] Entity-relationship diagrams (ERD)
-* [ ] Wireframes
+* [x] Entity-relationship diagrams (ERD)
+* [x] Wireframes
