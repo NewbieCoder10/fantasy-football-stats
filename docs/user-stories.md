@@ -1,10 +1,9 @@
 ## User stories
 
-### Fantasy Football User
-Would be able to find out certain fantasy football stats about certain 
-players using a specific search. The user could benefit from this when
-playing Fantasy Football.
+### Football User
+Would be able to find out certain information about certain 
+players using this app. User, could benefit from this when
+searching for a player they want to know about.
 
 ### General User
-Could be looking up specific football stats just for 
-general knowledge, or personal interest.
+Could be used for general knowledge, or personal interest.
