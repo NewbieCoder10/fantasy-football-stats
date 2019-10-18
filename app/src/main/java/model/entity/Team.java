@@ -16,7 +16,7 @@ import androidx.room.PrimaryKey;
 public class Team {
 
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "id")
+  @ColumnInfo(name = "team_id")
   private long id;
   private String abbreviation;
   @ColumnInfo(name ="full_name")

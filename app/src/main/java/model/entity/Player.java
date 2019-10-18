@@ -18,7 +18,7 @@ import androidx.room.PrimaryKey;
 public class Player {
 
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "id")
+  @ColumnInfo(name = "player_id")
   private long id;
   @ColumnInfo(name = "team_id", index = true)
   private long teamId;
