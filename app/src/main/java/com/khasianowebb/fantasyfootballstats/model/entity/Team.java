@@ -1,4 +1,4 @@
-package model.entity;
+package com.khasianowebb.fantasyfootballstats.model.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey;
         @Index(value = "short_name", unique = true)
     }
 )
-public class Team {
+public class  Team {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "team_id")
