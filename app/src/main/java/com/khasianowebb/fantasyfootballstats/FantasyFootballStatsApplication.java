@@ -3,14 +3,17 @@ package com.khasianowebb.fantasyfootballstats;
 import android.app.Application;
 import com.facebook.stetho.Stetho;
 import com.khasianowebb.fantasyfootballstats.service.FantasyFootballStatsDatabase;
+import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
 public class FantasyFootballStatsApplication extends Application {
     @Override
     public void onCreate() {
       super.onCreate();
+      GoogleSignInService.setApplicationContext(this);
       Stetho.initializeWithDefaults(this);
+        GoogleSignInService.setApplicationContext(this);
         FantasyFootballStatsDatabase.setApplicationContext(this);
-      final FantasyFootballStatsDatabase database = FantasyFootballStatsDatabase.getInstance();
+        FantasyFootballStatsDatabase database = FantasyFootballStatsDatabase.getInstance();
       new Thread(new Runnable() {
         @Override
         public void run() {
