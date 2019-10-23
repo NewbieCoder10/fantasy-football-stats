@@ -6,6 +6,7 @@ import com.khasianowebb.fantasyfootballstats.service.FantasyFootballStatsDatabas
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
 public class FantasyFootballStatsApplication extends Application {
+
     @Override
     public void onCreate() {
       super.onCreate();
