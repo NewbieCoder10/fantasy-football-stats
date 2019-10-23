@@ -22,3 +22,6 @@ they are interested in looking up.
 * [x] Intended Users & amp; user stories
 * [x] Entity-relationship diagrams (ERD)
 * [x] Wireframes
+
+## Data Definition Language
+* [DDL](docs/ddl.md)
