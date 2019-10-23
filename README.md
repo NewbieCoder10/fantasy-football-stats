@@ -16,6 +16,12 @@ they are interested in looking up.
 
 #### [Wireframe Diagram](docs/wireframe.md)
 
+
+## Data Model Implementation
+
+* [Implementation](docs/datamodelimplementation.md)
+
+
 ## First milestone
 
 * [x] Description
@@ -23,5 +29,3 @@ they are interested in looking up.
 * [x] Entity-relationship diagrams (ERD)
 * [x] Wireframes
 
-## Data Definition Language
-* [DDL](docs/ddl.md)
