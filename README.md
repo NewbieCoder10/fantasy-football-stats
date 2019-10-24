@@ -38,11 +38,19 @@ general information about their favorite players.
 * [x] Project description 
 
 * [x] Intended users
+
 * [x] User stories
+
 * [x] Wireframes
+
 * [X] ERD
+
 * [x] Entity Classes
+
 * [x] Dao interfaces
+
 * [x] Database class
+
 * [x] DDL
+
 * [x] Chrome inspectability of data model
