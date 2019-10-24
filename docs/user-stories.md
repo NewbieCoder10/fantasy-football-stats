@@ -6,5 +6,6 @@ players using this app; could benefit from this when
 searching for a player they want to know about.
 
 ### General User
-Could be used for general knowledge, or personal interest.
+Could be used for general knowledge, or personal interest. Someone
+that is interested with information regarding their favorite player.
 

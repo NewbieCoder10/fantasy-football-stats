@@ -35,8 +35,9 @@ general information about their favorite players.
 
 ## Second Milestone deliverable (Oct. 28th) 
 
-* [] Project description 
-* [] Intended users
+* [x] Project description 
+
+* [x] Intended users
 * [] User stories
 * [] Wireframes
 * [x] ERD
