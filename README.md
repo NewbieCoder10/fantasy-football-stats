@@ -39,7 +39,7 @@ general information about their favorite players.
 
 * [x] Intended users
 * [x] User stories
-* [] Wireframes
+* [x] Wireframes
 * [X] ERD
 * [x] Entity Classes
 * [x] Dao interfaces
