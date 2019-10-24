@@ -33,16 +33,16 @@ general information about their favorite players.
 
 * [x] Wireframes
 
-## Second Milestone deliverable (Oct. 28th) 
+## [Second Milestone deliverable (Oct. 28th](https://deep-dive-coding-java-cohort-8.github.io/2019/10/22/android-milestone-2-rubric.html)
 
 * [x] Project description 
 
 * [x] Intended users
-* [] User stories
+* [x] User stories
 * [] Wireframes
-* [x] ERD
-* [] Entity Classes
-* [] Dao interfaces
-* [] Database class
-* [] DDL
-* [] Chrome inspectability of data model
+* [] ERD
+* [x] Entity Classes
+* [x] Dao interfaces
+* [x] Database class
+* [x] DDL
+* [x] Chrome inspectability of data model
