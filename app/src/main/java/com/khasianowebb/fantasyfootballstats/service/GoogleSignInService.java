@@ -14,8 +14,6 @@ import com.google.android.gms.tasks.Task;
 
 public class GoogleSignInService {
 
-
-
   private static Application applicationContext;
 
   private GoogleSignInClient client;
