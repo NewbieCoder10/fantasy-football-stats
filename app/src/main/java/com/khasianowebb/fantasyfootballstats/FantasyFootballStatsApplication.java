@@ -22,4 +22,5 @@ public class FantasyFootballStatsApplication extends Application {
         }
       }).start();
     }
+
   }
