@@ -1,0 +1,178 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e732bc4121b3eefb541b341fd20f5853",
+    "entities": [
+      {
+        "tableName": "Player",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`player_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `team_id` INTEGER NOT NULL, `jersey` TEXT, `last_name` TEXT, `first_name` TEXT, `position` TEXT, `college` TEXT, FOREIGN KEY(`team_id`) REFERENCES `Team`(`team_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "player_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "teamId",
+            "columnName": "team_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jersey",
+            "columnName": "jersey",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "college",
+            "columnName": "college",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "player_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Player_team_id",
+            "unique": false,
+            "columnNames": [
+              "team_id"
+            ],
+            "createSql": "CREATE  INDEX `index_Player_team_id` ON `${TABLE_NAME}` (`team_id`)"
+          },
+          {
+            "name": "index_Player_jersey",
+            "unique": false,
+            "columnNames": [
+              "jersey"
+            ],
+            "createSql": "CREATE  INDEX `index_Player_jersey` ON `${TABLE_NAME}` (`jersey`)"
+          },
+          {
+            "name": "index_Player_last_name",
+            "unique": false,
+            "columnNames": [
+              "last_name"
+            ],
+            "createSql": "CREATE  INDEX `index_Player_last_name` ON `${TABLE_NAME}` (`last_name`)"
+          },
+          {
+            "name": "index_Player_first_name",
+            "unique": false,
+            "columnNames": [
+              "first_name"
+            ],
+            "createSql": "CREATE  INDEX `index_Player_first_name` ON `${TABLE_NAME}` (`first_name`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Team",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "team_id"
+            ],
+            "referencedColumns": [
+              "team_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Team",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`team_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `abbreviation` TEXT, `full_name` TEXT, `short_name` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "team_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "abbreviation",
+            "columnName": "abbreviation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "full_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shortName",
+            "columnName": "short_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "team_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Team_abbreviation",
+            "unique": true,
+            "columnNames": [
+              "abbreviation"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_Team_abbreviation` ON `${TABLE_NAME}` (`abbreviation`)"
+          },
+          {
+            "name": "index_Team_full_name",
+            "unique": true,
+            "columnNames": [
+              "full_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_Team_full_name` ON `${TABLE_NAME}` (`full_name`)"
+          },
+          {
+            "name": "index_Team_short_name",
+            "unique": true,
+            "columnNames": [
+              "short_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_Team_short_name` ON `${TABLE_NAME}` (`short_name`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e732bc4121b3eefb541b341fd20f5853')"
+    ]
+  }
+}
