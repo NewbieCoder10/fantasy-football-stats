@@ -1,9 +1,10 @@
 package com.khasianowebb.fantasyfootballstats.service;
 
 import com.khasianowebb.fantasyfootballstats.BuildConfig;
-import com.khasianowebb.fantasyfootballstats.model.entity.Team;
 import com.khasianowebb.fantasyfootballstats.model.entity.Player;
-import io.reacivex.Single;
+import com.khasianowebb.fantasyfootballstats.model.entity.Team;
+import io.reactivex.Single;
+import java.util.List;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
@@ -11,21 +12,21 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-public interface TeamService {
+public interface FootballService {
 
-}
+  @GET("nfl-teams/xml/")
+  Single<Team> newTeam(@Query("team") String count);
 
-  static TeamService getInstance() { return InstanceHolder.INSTANCE; }
+  @GET("players/xml/")
+  Single<Player> newPlayer(@Query("player") String count);
 
-  @GET("team/players")
-  Single<Team> newTeam(@Query("team_count") int count);
+  static FootballService getInstance() { return InstanceHolder.INSTANCE; }
 
   class InstanceHolder {
 
-    private static final TeamService INSTANCE;
+    private static final FootballService INSTANCE;
 
     static {
       // TODO Skip Creation of interceptor and client for production.
@@ -40,7 +41,7 @@ public interface TeamService {
           .baseUrl(BuildConfig.BASE_URL)
           .client(client) // TODO Leave this out for production.
           .build();
-      INSTANCE = retrofit.create(DeckOfCardsService.class);
+      INSTANCE = retrofit.create(FootballService.class);
     }
 
   }
