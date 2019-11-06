@@ -12,18 +12,6 @@
     android:layout_height="wrap_content"
     android:theme="@style/AppTheme.AppBarOverlay">
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!--    <androidx.appcompat.widget.Toolbar-->
 <!--      android:id="@+id/toolbar"-->
 <!--      android:layout_width="match_parent"-->
@@ -41,6 +29,6 @@
     android:layout_gravity="bottom|end"
     app:srcCompat="@drawable/ic_add_box"/>
 
-  <include layout="@layout/content_main2"/>
+  <include layout="@layout/content_main"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

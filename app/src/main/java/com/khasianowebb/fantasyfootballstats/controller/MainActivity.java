@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
             .setAction("Action", null).show();
       }
     });
+
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    MainFragment mainFragment = new MainFragment();
+    fragmentManager.beginTransaction().add(R.id.fragment_container, mainFragment).commit();
   }
 
   public boolean onCreateOptionsMenu(Menu menu) {
