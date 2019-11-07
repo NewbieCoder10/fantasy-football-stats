@@ -1,5 +1,13 @@
 apply plugin: 'com.android.application'
 
+def getServiceProperty(String property){
+    Properties properties = new Properties();
+    properties.load(new FileInputStream("../credentials/fantasy-football-nerd.properties"));
+    return String.format("\"%s\"", properties.getProperty(property));
+}
+
+
+
 android {
     compileSdkVersion 29
     defaultConfig {
@@ -10,6 +18,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "BASE_URL", '" https://www.fantasyfootballnerd.com/service/"'
+        buildConfigField "String", "API_KEY", getServiceProperty("api_key");
 
         javaCompileOptions {
             annotationProcessorOptions {

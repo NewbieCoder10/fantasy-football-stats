@@ -3,6 +3,7 @@ package com.khasianowebb.fantasyfootballstats.service;
 import com.khasianowebb.fantasyfootballstats.BuildConfig;
 import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 import java.util.List;
 import okhttp3.OkHttpClient;
@@ -12,15 +13,16 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface FootballService {
 
-  @GET("nfl-teams/xml/")
-  Single<Team> newTeam(@Query("team") String count);
+  @GET("nfl-teams/json/{apiKey}")
+  Observable<List<Team>> getTeams(@Path("apiKey") String apiKey);
 
-  @GET("players/xml/")
-  Single<Player> newPlayer(@Query("player") String count);
+  @GET("players/json/{apiKey}")
+  Observable<List<Player>> getPlayers(@Path("apiKey") String apiKey);
 
   static FootballService getInstance() { return InstanceHolder.INSTANCE; }
 

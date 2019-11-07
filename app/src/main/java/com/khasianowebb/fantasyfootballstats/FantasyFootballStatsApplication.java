@@ -7,20 +7,20 @@ import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
 public class FantasyFootballStatsApplication extends Application {
 
-    @Override
-    public void onCreate() {
-      super.onCreate();
-      GoogleSignInService.setApplicationContext(this);
-      Stetho.initializeWithDefaults(this);
-        GoogleSignInService.setApplicationContext(this);
-        FantasyFootballStatsDatabase.setApplicationContext(this);
-        FantasyFootballStatsDatabase database = FantasyFootballStatsDatabase.getInstance();
-      new Thread(new Runnable() {
-        @Override
-        public void run() {
-          database.getTeamDao().delete();
-        }
-      }).start();
-    }
-
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    GoogleSignInService.setApplicationContext(this);
+    Stetho.initializeWithDefaults(this);
+    GoogleSignInService.setApplicationContext(this);
+    FantasyFootballStatsDatabase.setApplicationContext(this);
+    FantasyFootballStatsDatabase database = FantasyFootballStatsDatabase.getInstance();
+    new Thread(new Runnable() {
+      @Override
+      public void run() {
+        database.getTeamDao().delete();
+      }
+    }).start();
   }
+
+}

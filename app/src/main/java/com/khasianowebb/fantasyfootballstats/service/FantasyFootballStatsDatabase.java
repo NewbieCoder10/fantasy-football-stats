@@ -1,16 +1,20 @@
 package com.khasianowebb.fantasyfootballstats.service;
 
 import android.app.Application;
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+import com.khasianowebb.fantasyfootballstats.BuildConfig;
 import com.khasianowebb.fantasyfootballstats.FantasyFootballStatsApplication;
 import com.khasianowebb.fantasyfootballstats.model.dao.PlayerDao;
 import com.khasianowebb.fantasyfootballstats.model.dao.TeamDao;
 import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
+import io.reactivex.schedulers.Schedulers;
 import java.util.Date;
 
 @Database(
@@ -43,7 +47,21 @@ public abstract class FantasyFootballStatsDatabase extends RoomDatabase {
 
     static {
       INSTANCE =
-          Room.databaseBuilder(applicationContext, FantasyFootballStatsDatabase.class, "fantasyfootballstats_db").build();
+          Room.databaseBuilder(applicationContext, FantasyFootballStatsDatabase.class,
+              "fantasyfootballstats_db")
+              .addCallback(new Callback() {
+                @Override
+                public void onCreate(@NonNull SupportSQLiteDatabase db) {
+                  super.onCreate(db);
+                  FootballService service = FootballService.getInstance();
+                  service.getTeams(BuildConfig.API_KEY)
+                      .subscribeOn(Schedulers.io())
+                      .subscribe((teams) -> {
+                        FantasyFootballStatsDatabase.getInstance().getTeamDao().insert(teams);
+                      });
+                }
+              })
+              .build();
     }
 
   }
