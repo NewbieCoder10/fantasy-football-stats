@@ -1,6 +1,7 @@
 package com.khasianowebb.fantasyfootballstats.service;
 
 import android.app.Application;
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
@@ -56,8 +57,11 @@ public abstract class FantasyFootballStatsDatabase extends RoomDatabase {
                   FootballService service = FootballService.getInstance();
                   service.getTeams(BuildConfig.API_KEY)
                       .subscribeOn(Schedulers.io())
-                      .subscribe((teams) -> {
-                        FantasyFootballStatsDatabase.getInstance().getTeamDao().insert(teams);
+                      .subscribe((response) -> {
+                        FantasyFootballStatsDatabase.getInstance().getTeamDao()
+                            .insert(response.getTeams());
+                      }, (e) -> {
+                        Log.d("Preload", e.getMessage(), e);
                       });
                 }
               })

@@ -3,6 +3,7 @@ package com.khasianowebb.fantasyfootballstats.service;
 import com.khasianowebb.fantasyfootballstats.BuildConfig;
 import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
+import com.khasianowebb.fantasyfootballstats.model.pojo.TeamsResponse;
 import io.reactivex.Observable;
 import io.reactivex.Single;
 import java.util.List;
@@ -19,7 +20,7 @@ import retrofit2.http.Query;
 public interface FootballService {
 
   @GET("nfl-teams/json/{apiKey}")
-  Observable<List<Team>> getTeams(@Path("apiKey") String apiKey);
+  Single<TeamsResponse> getTeams(@Path("apiKey") String apiKey);
 
   @GET("players/json/{apiKey}")
   Observable<List<Player>> getPlayers(@Path("apiKey") String apiKey);
