@@ -28,6 +28,30 @@ for anyone who has an interest in football.
 #### [Wireframe Diagram](docs/wireframe.md)
 
 
+## Summary of current state of the app
+
+* The current state of the completion of my app so far is that it runs and allows the
+user to use Google Sign-In to access the app. Also I have the main-fragment that I will
+be using somewhat set up to this point. I need to make sure that the app is able to 
+communicate with the information that the user is entering. I still need to populate the
+database for the players information. As it is known so far, there are no bugs within my app. 
+
+
+* I could possible work on the colors if I decide to change them, although I do like the
+current color of the app up to this point. I could try to update the font possibly if I can
+figure out what to do within my app.
+
+
+
+* I might try to create more things that are more fragments if needed within
+my project.
+ 
+* I would be able to create more within the database, if I could and also
+had the free API resources to do so.
+
+ 
+
+
 ## Data Model Implementation
 
 * [Implementation](docs/datamodelimplementation.md)
@@ -73,15 +97,15 @@ for anyone who has an interest in football.
 
 * [x] Intended users
 
-* [ ] User stories
+* [x] User stories
 
-* [ ] Summary of Current State
+* [x] Summary of Current State
 
-* [ ] Wireframes
+* [x] Wireframes
 
-* [ ] ERD
+* [x] ERD
 
-* [ ] DDL
+* [x] DDL
 
 * [ ] Technical Requirements & Dependencies 
 
