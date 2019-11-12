@@ -29,7 +29,6 @@ for anyone who has an interest in football.
 
 
 ## Summary of current state of the app
-
 * The current state of the completion of my app so far is that it runs and allows the
 user to use Google Sign-In to access the app. Also I have the main-fragment that I will
 be using somewhat set up to this point. I need to make sure that the app is able to 
@@ -42,19 +41,53 @@ current color of the app up to this point. I could try to update the font possib
 figure out what to do within my app.
 
 
-
 * I might try to create more things that are more fragments if needed within
 my project.
+ 
  
 * I would be able to create more within the database, if I could and also
 had the free API resources to do so.
 
- 
-
 
 ## Data Model Implementation
-
 * [Implementation](docs/datamodelimplementation.md)
+
+## Technical requirements & dependencies
+
+
+
+
+
+
+## Javadoc-generated technical documentation
+
+
+
+
+
+
+## Copyright & licenses
+
+
+
+
+
+
+## Build Instructions
+
+
+
+
+
+
+## Basic user instructions
+
+
+
+
+
+
+
 
 ## First Milestone deliverable (Oct. 2nd)
 
