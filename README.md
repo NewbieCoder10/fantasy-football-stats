@@ -15,9 +15,11 @@ I believe this is a potentially interesting app to users who like football,
 and want general information about their favorite players or teams. 
 
 ## Intended Users
-Intended for users that may want general information about a player
+Intended for users that may want information about a player
 they are interested in looking up. Anyone who is interested in finding out
-general information about their favorite players.
+general information about their favorite players. Also, intended for users that
+may want general information about their favorite team. This is intended 
+for anyone who has an interest in football.
 
 #### [User stories](docs/user-stories.md)
 
@@ -67,9 +69,9 @@ general information about their favorite players.
 
 * Documentation
 
-* [ ] Project description 
+* [x] Project description 
 
-* [ ] Intended users
+* [x] Intended users
 
 * [ ] User stories
 
