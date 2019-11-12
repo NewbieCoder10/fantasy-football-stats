@@ -4,8 +4,15 @@ look up football information relating to players they are interested in.
 
 ## Description
 Developed in Android, Football Info is a search app that will let users search up a player
-they are interested in and return the information of that player. Users can use
-their Google account to save searches they have looked up.
+they are interested in and return the information of that player. Also they will be able
+to search for a team. Users can use their Google account to save searches they have looked up.
+This will be possible because their account information will be remembered. 
+
+The intended functionality will be a person on their mobile device using a search bar. This will
+allow the user to search for the player or team they are interested in. 
+My motivation for choosing this as a topic to work on is because it is something I can relate too.
+I believe this is a potentially interesting app to users who like football, 
+and want general information about their favorite players or teams. 
 
 ## Intended Users
 Intended for users that may want general information about a player
@@ -54,3 +61,32 @@ general information about their favorite players.
 * [x] DDL
 
 * [x] Chrome inspectability of data model
+
+
+## [Third Milestone deliverable (Oct. 28th](https://deep-dive-coding-java-cohort-8.github.io/2019/11/12/android-standalone-project-rubric.html#overview)
+
+* Documentation
+
+* [ ] Project description 
+
+* [ ] Intended users
+
+* [ ] User stories
+
+* [ ] Summary of Current State
+
+* [ ] Wireframes
+
+* [ ] ERD
+
+* [ ] DDL
+
+* [ ] Technical Requirements & Dependencies 
+
+* [ ] JavaDoc Generated Technical Documentation.
+
+* [ ] Copyright and Licensing
+
+* [ ] Build Instructions
+
+* [ ] Basic User Instructions
