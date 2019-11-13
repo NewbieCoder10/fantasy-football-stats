@@ -20,6 +20,9 @@ public interface TeamDao {
   @Query("SELECT * FROM Team WHERE team_id = :teamId")
   LiveData<Team> getByTeamId(long teamId);
 
+  @Query("SELECT team_id FROM Team WHERE abbreviation = :abbreviation")
+  Long getByAbbreviation(String abbreviation);
+
   @Query("SELECT * FROM Team")
   LiveData<List<Team>> getAllTeams();
 

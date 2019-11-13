@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "e732bc4121b3eefb541b341fd20f5853",
+    "identityHash": "af323d16ccfb11ddd1d8aabce34af9ac",
     "entities": [
       {
         "tableName": "Player",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`player_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `team_id` INTEGER NOT NULL, `jersey` TEXT, `last_name` TEXT, `first_name` TEXT, `position` TEXT, `college` TEXT, FOREIGN KEY(`team_id`) REFERENCES `Team`(`team_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`player_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `team_id` INTEGER, `jersey` TEXT, `last_name` TEXT, `first_name` TEXT, `position` TEXT, `college` TEXT, FOREIGN KEY(`team_id`) REFERENCES `Team`(`team_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -18,7 +18,7 @@
             "fieldPath": "teamId",
             "columnName": "team_id",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "jersey",
@@ -64,7 +64,7 @@
             "columnNames": [
               "team_id"
             ],
-            "createSql": "CREATE  INDEX `index_Player_team_id` ON `${TABLE_NAME}` (`team_id`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Player_team_id` ON `${TABLE_NAME}` (`team_id`)"
           },
           {
             "name": "index_Player_jersey",
@@ -72,7 +72,7 @@
             "columnNames": [
               "jersey"
             ],
-            "createSql": "CREATE  INDEX `index_Player_jersey` ON `${TABLE_NAME}` (`jersey`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Player_jersey` ON `${TABLE_NAME}` (`jersey`)"
           },
           {
             "name": "index_Player_last_name",
@@ -80,7 +80,7 @@
             "columnNames": [
               "last_name"
             ],
-            "createSql": "CREATE  INDEX `index_Player_last_name` ON `${TABLE_NAME}` (`last_name`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Player_last_name` ON `${TABLE_NAME}` (`last_name`)"
           },
           {
             "name": "index_Player_first_name",
@@ -88,7 +88,23 @@
             "columnNames": [
               "first_name"
             ],
-            "createSql": "CREATE  INDEX `index_Player_first_name` ON `${TABLE_NAME}` (`first_name`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Player_first_name` ON `${TABLE_NAME}` (`first_name`)"
+          },
+          {
+            "name": "index_Player_position",
+            "unique": false,
+            "columnNames": [
+              "position"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Player_position` ON `${TABLE_NAME}` (`position`)"
+          },
+          {
+            "name": "index_Player_college",
+            "unique": false,
+            "columnNames": [
+              "college"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Player_college` ON `${TABLE_NAME}` (`college`)"
           }
         ],
         "foreignKeys": [
@@ -147,7 +163,7 @@
             "columnNames": [
               "abbreviation"
             ],
-            "createSql": "CREATE UNIQUE INDEX `index_Team_abbreviation` ON `${TABLE_NAME}` (`abbreviation`)"
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Team_abbreviation` ON `${TABLE_NAME}` (`abbreviation`)"
           },
           {
             "name": "index_Team_full_name",
@@ -155,7 +171,7 @@
             "columnNames": [
               "full_name"
             ],
-            "createSql": "CREATE UNIQUE INDEX `index_Team_full_name` ON `${TABLE_NAME}` (`full_name`)"
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Team_full_name` ON `${TABLE_NAME}` (`full_name`)"
           },
           {
             "name": "index_Team_short_name",
@@ -163,7 +179,7 @@
             "columnNames": [
               "short_name"
             ],
-            "createSql": "CREATE UNIQUE INDEX `index_Team_short_name` ON `${TABLE_NAME}` (`short_name`)"
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Team_short_name` ON `${TABLE_NAME}` (`short_name`)"
           }
         ],
         "foreignKeys": []
@@ -172,7 +188,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e732bc4121b3eefb541b341fd20f5853')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'af323d16ccfb11ddd1d8aabce34af9ac')"
     ]
   }
 }

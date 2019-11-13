@@ -3,7 +3,9 @@ package com.khasianowebb.fantasyfootballstats.model.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+import com.google.gson.annotations.SerializedName;
 
 @Entity(
     foreignKeys = {
@@ -20,17 +22,28 @@ public class Player {
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "player_id")
   private long id;
+
   @ColumnInfo(name = "team_id", index = true)
-  private long teamId;
-  @ColumnInfo(name = "jersey", index = true)
+  private Long teamId;
+
+  @Ignore
+  private String tempTeam;
+
+  @ColumnInfo(index = true)
   private String jersey;
+
   @ColumnInfo(name = "last_name", index = true)
+  @SerializedName("lname")
   private String lastName;
+
   @ColumnInfo(name = "first_name", index = true)
+  @SerializedName("fname")
   private String firstName;
-  @ColumnInfo(name = "position")
+
+  @ColumnInfo(index = true)
   private String position;
-  @ColumnInfo(name = "college")
+
+  @ColumnInfo(index = true)
   private String college;
 
   public long getId() {
@@ -41,12 +54,20 @@ public class Player {
     this.id = id;
   }
 
-  public long getTeamId() {
+  public Long getTeamId() {
     return teamId;
   }
 
-  public void setTeamId(long teamId) {
+  public void setTeamId(Long teamId) {
     this.teamId = teamId;
+  }
+
+  public String getTempTeam() {
+    return tempTeam;
+  }
+
+  public void setTempTeam(String tempTeam) {
+    this.tempTeam = tempTeam;
   }
 
   public String getJersey() {

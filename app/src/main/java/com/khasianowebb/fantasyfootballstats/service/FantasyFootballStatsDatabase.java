@@ -6,17 +6,16 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverter;
-import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.khasianowebb.fantasyfootballstats.BuildConfig;
-import com.khasianowebb.fantasyfootballstats.FantasyFootballStatsApplication;
 import com.khasianowebb.fantasyfootballstats.model.dao.PlayerDao;
 import com.khasianowebb.fantasyfootballstats.model.dao.TeamDao;
 import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
+import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
-import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 @Database(
     entities = {Player.class, Team.class}, version = 1,
@@ -50,24 +49,52 @@ public abstract class FantasyFootballStatsDatabase extends RoomDatabase {
       INSTANCE =
           Room.databaseBuilder(applicationContext, FantasyFootballStatsDatabase.class,
               "fantasyfootballstats_db")
-              .addCallback(new Callback() {
-                @Override
-                public void onCreate(@NonNull SupportSQLiteDatabase db) {
-                  super.onCreate(db);
-                  FootballService service = FootballService.getInstance();
-                  service.getTeams(BuildConfig.API_KEY)
-                      .subscribeOn(Schedulers.io())
-                      .subscribe((response) -> {
-                        FantasyFootballStatsDatabase.getInstance().getTeamDao()
-                            .insert(response.getTeams());
-                      }, (e) -> {
-                        Log.d("Preload", e.getMessage(), e);
-                      });
-                }
-              })
+              .addCallback(new Prepopulation())
               .build();
     }
 
+  }
+
+  private static class Prepopulation extends Callback {
+
+    @Override
+    public void onCreate(@NonNull SupportSQLiteDatabase db) {
+      super.onCreate(db);
+      FootballService service = FootballService.getInstance();
+      FantasyFootballStatsDatabase database = FantasyFootballStatsDatabase.getInstance();
+      service.getTeams(BuildConfig.API_KEY)
+          .subscribeOn(Schedulers.io())
+          .doFinally(() -> {
+            Log.d(getClass().getSimpleName(), "Teams done");
+            service.getPlayers(BuildConfig.API_KEY)
+                .subscribeOn(Schedulers.io())
+                .subscribe((resp) -> {
+                  Log.d(getClass().getSimpleName(), "Received players");
+                  List<Player> players = new LinkedList<>();
+                  for (Player player: resp.getPlayers()){
+                    String abbreviation = player.getTempTeam();
+                    Long teamId = database.getTeamDao().getByAbbreviation(abbreviation);
+                    if (teamId != null) {
+                      player.setTeamId(teamId);
+                    } else {
+                      Log.d(getClass().getSimpleName(), "Abbreviation not found: " + abbreviation);
+                    }
+                    players.add(player);
+                  }
+                  database.getPlayerDao().insert(players);
+                  Log.d(getClass().getSimpleName(), "Players done");
+                }, (e) -> {
+                  Log.d("Preload", e.getMessage(), e);
+                });
+          })
+          .subscribe((response) -> {
+            Log.d(getClass().getSimpleName(), "Received teams");
+            database.getTeamDao()
+                .insert(response.getTeams());
+          }, (e) -> {
+            Log.d("Preload", e.getMessage(), e);
+          });
+    }
   }
 
   // public static class Converters {
