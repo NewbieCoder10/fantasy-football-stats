@@ -54,6 +54,19 @@ had the free API resources to do so.
 
 ## Technical requirements & dependencies
 
+* I tested it on an API 21,
+also with a Pixel 2 API 28 Emulator.
+
+*
+
+* The Minimum android API required is an API 21.
+
+* It is in the Portrait restriction view.
+
+* Pixel 2 API 28
+
+* The Language restriction on this is English only.
+
 
 
 

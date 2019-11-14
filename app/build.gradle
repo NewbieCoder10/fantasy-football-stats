@@ -1,11 +1,10 @@
 apply plugin: 'com.android.application'
 
-def getServiceProperty(String property){
+def getServiceProperty(String property) {
     Properties properties = new Properties();
     properties.load(new FileInputStream("../credentials/fantasy-football-nerd.properties"));
     return String.format("\"%s\"", properties.getProperty(property));
 }
-
 
 
 android {
