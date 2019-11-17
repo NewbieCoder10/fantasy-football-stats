@@ -57,8 +57,6 @@ had the free API resources to do so.
 * I tested it on an API 21,
 also with a Pixel 2 API 28 Emulator.
 
-*
-
 * The Minimum android API required is an API 21.
 
 * It is in the Portrait restriction view.
@@ -66,10 +64,6 @@ also with a Pixel 2 API 28 Emulator.
 * Pixel 2 API 28
 
 * The Language restriction on this is English only.
-
-
-
-
 
 
 ## Javadoc-generated technical documentation
@@ -87,19 +81,40 @@ also with a Pixel 2 API 28 Emulator.
 
 
 ## Build Instructions
+####1. 
+You will need to go to the repository site of this app, click the clone/download button
+copy that link.
 
+####2.
+Then with IntelliJ open, click on checkout version control from Git, and click GitHub
+repository, then paste your link into there. Then click cancel, cancel.
 
+####3.
+Then click on the open button, from within the main page of IntelliJ, and click on the
+project that you had just cloned & checked out from GitHub. 
 
-
+####4.
+Finally sync all information for the Gradle build, and execute anything it ask you
+to make sure the build is completed and finished correctly.
 
 
 ## Basic user instructions
+####1.
+Once the User open's the app, there will be the Google Sign-in service, they will be prompted
+to sign-in with their credentials.
 
+####2.
+Once the User is in the app, they will then be on the main page of the app, it will
+have a search-view and also a spinner-drop box they can use to search via the players, and 
+teams.
 
+####3.
+There will be a setting's icon located in the top right of the app, that will allow
+the User to sign-out or go to the settings main-page. 
 
-
-
-
+####4.
+Any user, that has experience when dealing with Android OS should be
+able to access this fairly easy.
 
 
 ## First Milestone deliverable (Oct. 2nd)
