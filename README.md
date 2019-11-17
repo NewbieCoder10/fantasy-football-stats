@@ -191,12 +191,12 @@ able to access this fairly easy.
 
 * [x] DDL
 
-* [ ] Technical Requirements & Dependencies 
+* [x] Technical Requirements & Dependencies 
 
 * [ ] JavaDoc Generated Technical Documentation.
 
 * [ ] Copyright and Licensing
 
-* [ ] Build Instructions
+* [x] Build Instructions
 
-* [ ] Basic User Instructions
+* [x] Basic User Instructions
