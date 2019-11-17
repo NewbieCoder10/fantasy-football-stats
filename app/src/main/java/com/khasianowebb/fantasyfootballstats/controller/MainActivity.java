@@ -6,10 +6,15 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+    implements BottomNavigationView.OnNavigationItemSelectedListener {
+
+  private BottomNavigationView navigation;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -46,4 +51,20 @@ public class MainActivity extends AppCompatActivity {
   }
 
 
+  @Override
+  public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+    Fragment fragment = null;
+    switch (menuItem.getItemId()) {
+      case R.id.teams:
+        fragment = TeamsFragment.newInstance();
+        break;
+      case R.id.players:
+        fragment = PlayersFragment.newInstance();
+        break;
+    }
+    getSupportFragmentManager().beginTransaction()
+        .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName())
+        .commit();
+    return true;
+  }
 }

@@ -54,6 +54,7 @@ had the free API resources to do so.
 
 ## Technical requirements & dependencies
 
+#### Technical requirements
 * I tested it on an API 21,
 also with a Pixel 2 API 28 Emulator.
 
@@ -65,6 +66,28 @@ also with a Pixel 2 API 28 Emulator.
 
 * The Language restriction on this is English only.
 
+#### Dependencies
+ * androidx 
+    * appcompat
+    * constraint-layout
+    * lifecycle
+
+
+*
+
+*
+
+*
+
+*
+
+*
+
+*
+
+*
+
+*
 
 ## Javadoc-generated technical documentation
 
