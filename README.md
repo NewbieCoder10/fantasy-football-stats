@@ -67,28 +67,36 @@ also with a Pixel 2 API 28 Emulator.
 * The Language restriction on this is English only.
 
 #### Dependencies
- * androidx 
+ * Androidx 
     * appcompat
     * constraint-layout
     * lifecycle
+    * room-runtime
+    * legacy-support
+    * room-compiler 
+    * runner
+    * espresso.espresso-core
 
+* Google
+    * android.material
+    * android.gms:play-services-auth
+    * code.gson
 
-*
+* Reactivex 
+    * rxjava2:rxjava
+    * rxjava2:rxandroid
 
-*
+* Squareup
+    * retrofit2: retrofit
+    * retrofit2: converter-gson
+    * retrofit2: adapter
+    * okhttp3: logging interceptor
 
-*
+* Facebook
+    * stetho    
 
-*
-
-*
-
-*
-
-*
-
-*
-
+* Junit
+    junit:4.12
 ## Javadoc-generated technical documentation
 
 
