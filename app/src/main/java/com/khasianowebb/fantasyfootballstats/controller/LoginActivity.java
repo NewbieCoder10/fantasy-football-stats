@@ -8,6 +8,9 @@ import android.os.Bundle;
 import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
+/**
+ * The type Login activity.
+ */
 public class LoginActivity extends AppCompatActivity {
   private static final int LOGIN_REQUEST_CODE = 1000;
 

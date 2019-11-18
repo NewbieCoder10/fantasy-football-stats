@@ -12,6 +12,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity
     implements BottomNavigationView.OnNavigationItemSelectedListener, SharedPreferences.OnSharedPreferenceChangeListener {
 

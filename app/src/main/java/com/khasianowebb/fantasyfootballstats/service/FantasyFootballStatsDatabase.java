@@ -17,6 +17,9 @@ import io.reactivex.schedulers.Schedulers;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * The type Fantasy football stats database.
+ */
 @Database(
     entities = {Player.class, Team.class}, version = 1,
     exportSchema = true)
@@ -24,20 +27,42 @@ import java.util.List;
  //@TypeConverters(BlackjackDatabase.Converters.class)
 public abstract class FantasyFootballStatsDatabase extends RoomDatabase {
 
+  /**
+   * Instantiates a new Fantasy football stats database.
+   */
   protected FantasyFootballStatsDatabase() {}
 
   private static Application applicationContext;
 
+  /**
+   * Gets player dao.
+   *
+   * @return the player dao
+   */
   public abstract PlayerDao getPlayerDao();
 
+  /**
+   * Gets team dao.
+   *
+   * @return the team dao
+   */
   public abstract TeamDao getTeamDao();
 
 
-
+  /**
+   * Sets application context.
+   *
+   * @param applicationContext the application context
+   */
   public static void setApplicationContext(Application applicationContext) {
     FantasyFootballStatsDatabase.applicationContext = applicationContext;
   }
 
+  /**
+   * Get instance fantasy football stats database.
+   *
+   * @return the fantasy football stats database
+   */
   public static FantasyFootballStatsDatabase getInstance(){
     return InstanceHolder.INSTANCE;
   }

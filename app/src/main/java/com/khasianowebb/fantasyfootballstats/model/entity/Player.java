@@ -7,6 +7,9 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * The type Player.
+ */
 @Entity(
     foreignKeys = {
         @ForeignKey(
@@ -46,66 +49,146 @@ public class Player {
   @ColumnInfo(index = true)
   private String college;
 
+  /**
+   * Gets id.
+   *
+   * @return the id
+   */
   public long getId() {
     return id;
   }
 
+  /**
+   * Sets id.
+   *
+   * @param id the id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
+  /**
+   * Gets team id.
+   *
+   * @return the team id
+   */
   public Long getTeamId() {
     return teamId;
   }
 
+  /**
+   * Sets team id.
+   *
+   * @param teamId the team id
+   */
   public void setTeamId(Long teamId) {
     this.teamId = teamId;
   }
 
+  /**
+   * Gets temp team.
+   *
+   * @return the temp team
+   */
   public String getTempTeam() {
     return tempTeam;
   }
 
+  /**
+   * Sets temp team.
+   *
+   * @param tempTeam the temp team
+   */
   public void setTempTeam(String tempTeam) {
     this.tempTeam = tempTeam;
   }
 
+  /**
+   * Gets jersey.
+   *
+   * @return the jersey
+   */
   public String getJersey() {
     return jersey;
   }
 
+  /**
+   * Sets jersey.
+   *
+   * @param jersey the jersey
+   */
   public void setJersey(String jersey) {
     this.jersey = jersey;
   }
 
+  /**
+   * Gets last name.
+   *
+   * @return the last name
+   */
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * Sets last name.
+   *
+   * @param lastName the last name
+   */
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+  /**
+   * Gets first name.
+   *
+   * @return the first name
+   */
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * Sets first name.
+   *
+   * @param firstName the first name
+   */
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+  /**
+   * Gets position.
+   *
+   * @return the position
+   */
   public String getPosition() {
     return position;
   }
 
+  /**
+   * Sets position.
+   *
+   * @param position the position
+   */
   public void setPosition(String position) {
     this.position = position;
   }
 
+  /**
+   * Gets college.
+   *
+   * @return the college
+   */
   public String getCollege() {
     return college;
   }
 
+  /**
+   * Sets college.
+   *
+   * @param college the college
+   */
   public void setCollege(String college) {
     this.college = college;
   }

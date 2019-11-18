@@ -4,6 +4,9 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.khasianowebb.fantasyfootballstats.R;
 
+/**
+ * The type Settings activity.
+ */
 public class SettingsActivity extends AppCompatActivity {
 
   @Override

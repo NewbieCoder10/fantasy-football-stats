@@ -10,6 +10,9 @@ import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
 import com.khasianowebb.fantasyfootballstats.service.FantasyFootballStatsDatabase;
 
+/**
+ * The type Main view model.
+ */
 public class MainViewModel extends AndroidViewModel {
 
   private FantasyFootballStatsDatabase database;
@@ -23,6 +26,11 @@ public class MainViewModel extends AndroidViewModel {
    private MutableLiveData<Long> playerId;
    private LiveData<Player> player;
 
+  /**
+   * Instantiates a new Main view model.
+   *
+   * @param application the application
+   */
   public MainViewModel(@NonNull Application application) {
     super(application);
   }

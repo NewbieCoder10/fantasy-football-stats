@@ -18,16 +18,39 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+/**
+ * The interface Football service.
+ */
 public interface FootballService {
 
+  /**
+   * Gets teams.
+   *
+   * @param apiKey the api key
+   * @return the teams
+   */
   @GET("nfl-teams/json/{apiKey}")
   Single<TeamsResponse> getTeams(@Path("apiKey") String apiKey);
 
+  /**
+   * Gets players.
+   *
+   * @param apiKey the api key
+   * @return the players
+   */
   @GET("players/json/{apiKey}")
   Single<PlayersResponse> getPlayers(@Path("apiKey") String apiKey);
 
+  /**
+   * Gets instance.
+   *
+   * @return the instance
+   */
   static FootballService getInstance() { return InstanceHolder.INSTANCE; }
 
+  /**
+   * The type Instance holder.
+   */
   class InstanceHolder {
 
     private static final FootballService INSTANCE;
