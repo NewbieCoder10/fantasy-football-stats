@@ -99,7 +99,7 @@ also with a Pixel 2 API 28 Emulator.
     junit:4.12
      
 ## Javadoc-generated technical documentation
-
+[Javadoc-generated](file:///C:/Users/Khasiano/Desktop/bootcamp/projects/fantasy-football-stats/docs/api/index.html)
 
 
 
