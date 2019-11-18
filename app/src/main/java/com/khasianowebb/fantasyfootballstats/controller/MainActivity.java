@@ -1,6 +1,7 @@
 package com.khasianowebb.fantasyfootballstats.controller;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
@@ -12,7 +13,7 @@ import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity
-    implements BottomNavigationView.OnNavigationItemSelectedListener {
+    implements BottomNavigationView.OnNavigationItemSelectedListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
   private BottomNavigationView navigation;
 
@@ -31,9 +32,14 @@ public class MainActivity extends AppCompatActivity
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     boolean handled = true;
+    Intent intent;
     switch (item.getItemId()) {
       case R.id.sign_out:
         signOut();
+        break;
+      case R.id.preferences:
+        intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
         break;
       default:
         handled = super.onOptionsItemSelected(item);
@@ -66,5 +72,10 @@ public class MainActivity extends AppCompatActivity
         .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName())
         .commit();
     return true;
+  }
+
+  @Override
+  public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+    //todo: handle changed user preference
   }
 }
