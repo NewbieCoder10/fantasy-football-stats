@@ -33,7 +33,8 @@ for anyone who has an interest in football.
 user to use Google Sign-In to access the app. Also I have the main-fragment that the user
 will be able to click on the team or player tab and print the information of the team
 or the player. I need to make sure that the app is able to communicate with the 
-information that the user is entering. As it is known so far, there are no bugs within my app. 
+information that the user is entering. As it is known so far, there are no bugs within my app.
+I am trying to get the app to where, I can click on the players tab and have players shown. 
 
 
 * I could possible work on the colors if I decide to change them, although I do like the
@@ -61,6 +62,8 @@ also with a Pixel 2 API 28 Emulator.
 * The Minimum android API required is an API 21.
 
 * It is in the Portrait restriction view.
+
+* Android studio 3.4.1
 
 * Pixel 2 API 28
 
@@ -97,6 +100,46 @@ also with a Pixel 2 API 28 Emulator.
 
 * Junit
     junit:4.12
+    
+### Third Party libraries.
+implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+
+    def room_version = "2.2.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    def retrofit_version = "2.6.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    
+    
+    
+    
      
 ## Javadoc-generated technical documentation
 [Javadoc-generated](file:///C:/Users/Khasiano/Desktop/bootcamp/projects/fantasy-football-stats/docs/api/index.html)
