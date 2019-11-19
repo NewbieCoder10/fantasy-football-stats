@@ -1,0 +1,8 @@
+com.khasianowebb.fantasyfootballstats
+com.khasianowebb.fantasyfootballstats.controller
+com.khasianowebb.fantasyfootballstats.model.dao
+com.khasianowebb.fantasyfootballstats.model.entity
+com.khasianowebb.fantasyfootballstats.model.pojo
+com.khasianowebb.fantasyfootballstats.service
+com.khasianowebb.fantasyfootballstats.view
+com.khasianowebb.fantasyfootballstats.viewmodel
