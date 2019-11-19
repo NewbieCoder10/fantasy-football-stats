@@ -30,10 +30,10 @@ for anyone who has an interest in football.
 
 ## Summary of current state of the app
 * The current state of the completion of my app so far is that it runs and allows the
-user to use Google Sign-In to access the app. Also I have the main-fragment that I will
-be using somewhat set up to this point. I need to make sure that the app is able to 
-communicate with the information that the user is entering. I still need to populate the
-database for the players information. As it is known so far, there are no bugs within my app. 
+user to use Google Sign-In to access the app. Also I have the main-fragment that the user
+will be able to click on the team or player tab and print the information of the team
+or the player. I need to make sure that the app is able to communicate with the 
+information that the user is entering. As it is known so far, there are no bugs within my app. 
 
 
 * I could possible work on the colors if I decide to change them, although I do like the
@@ -178,23 +178,23 @@ able to access this fairly easy.
 
 * Documentation
 
-* [x] Project description 
+* [x] Project introduction & description 
 
 * [x] Intended users
 
 * [x] User stories
 
-* [x] Summary of Current State
+* [x] Summary of current state of the app
 
-* [x] Wireframes
+* [x] Wireframe diagram
 
 * [x] ERD
 
 * [x] DDL
 
-* [x] Technical Requirements & Dependencies 
+* [x] Technical requirements & dependencies 
 
-* [ ] JavaDoc Generated Technical Documentation.
+* [ ] Javadoc-generated technical documentation
 
 * [ ] Copyright and Licensing
 
