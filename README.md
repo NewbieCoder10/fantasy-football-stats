@@ -250,9 +250,9 @@ able to access this fairly easy.
 
 * [x] Technical requirements & dependencies 
 
-* [ ] Javadoc-generated technical documentation
+* [x] Javadoc-generated technical documentation
 
-* [ ] Copyright and Licensing
+* [x] Copyright and Licensing
 
 * [x] Build Instructions
 
