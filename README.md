@@ -131,9 +131,14 @@ implementation 'androidx.appcompat:appcompat:1.1.0'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'   
      
- [Draw.io](https://www.draw.io/)
- [Google-Sign in](https://developers.google.com/identity/sign-in/android/start-integrating)
-     
+
+
+## External Services
+[Draw.io](https://www.draw.io/)
+
+[Google-Sign in](https://developers.google.com/identity/sign-in/android/start-integrating)
+ 
+    
 ## Javadoc-generated technical documentation
 
 
