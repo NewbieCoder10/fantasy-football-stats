@@ -1,3 +1,7 @@
+## [GitHub](https://newbiecoder10.github.io/fantasy-football-stats/)
+
+## [Repository](https://github.com/NewbieCoder10/fantasy-football-stats)
+
 ## Introduction
 An introduction to this app is that, it will allow users to
 look up football information relating to players they are interested in.
