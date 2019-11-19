@@ -147,7 +147,7 @@ implementation 'androidx.appcompat:appcompat:1.1.0'
 
 
 
-### [License](LICENSE)
+### [License](https://github.com/NewbieCoder10/fantasy-football-stats/raw/master/LICENSE)
 
 
 
