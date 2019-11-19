@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/teams_navigation">
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/team_fragment">
+
+  <fragment
+    android:id="@+id/team_fragment"
+    android:name="com.khasianowebb.fantasyfootballstats.controller.TeamsFragment"/>
+
+  <fragment
+    android:id="@+id/player_fragment"
+    android:name="com.khasianowebb.fantasyfootballstats.controller.PlayersFragment"/>
 
 </navigation>

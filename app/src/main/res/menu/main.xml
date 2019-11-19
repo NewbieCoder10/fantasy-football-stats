@@ -5,9 +5,9 @@
   TODO Extract text to resources; import button icon drawables; reference icon drawables from items.
 
   <item
-    android:id="@+id/teams"
+    android:id="@+id/team_fragment"
     android:title="Teams"/>
   <item
-    android:id="@+id/players"
+    android:id="@+id/player_fragment"
     android:title="Players"/>
 </menu>

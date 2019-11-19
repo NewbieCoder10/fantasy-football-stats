@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.khasianowebb.fantasyfootballstats.R;
 
 /**
- * The type Settings activity.
+ * The type Settings activity. This is the activity tab for the settings that will allow the user to
+ * change the color of the app(text).
  */
 public class SettingsActivity extends AppCompatActivity {
 

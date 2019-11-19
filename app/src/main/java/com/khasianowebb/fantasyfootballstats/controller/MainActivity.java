@@ -8,15 +8,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
 /**
- * The type Main activity.
+ * The type Main activity, this extends the AppCompatActivity, it has the options tab, with settings,
+ * sign-out, shared preferences.
  */
 public class MainActivity extends AppCompatActivity
-    implements BottomNavigationView.OnNavigationItemSelectedListener, SharedPreferences.OnSharedPreferenceChangeListener {
+    implements SharedPreferences.OnSharedPreferenceChangeListener {
 
   private BottomNavigationView navigation;
 
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    navigation = findViewById(R.id.navigation);
+    NavigationUI.setupWithNavController(navigation, Navigation.findNavController(this, R.id.nav_host_fragment));
   }
 
   public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,26 +64,9 @@ public class MainActivity extends AppCompatActivity
         });
   }
 
-
-  @Override
-  public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-    Fragment fragment = null;
-    switch (menuItem.getItemId()) {
-      case R.id.teams:
-        fragment = TeamsFragment.newInstance();
-        break;
-      case R.id.players:
-        fragment = PlayersFragment.newInstance();
-        break;
-    }
-    getSupportFragmentManager().beginTransaction()
-        .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName())
-        .commit();
-    return true;
-  }
-
   @Override
   public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
     //todo: handle changed user preference
   }
+
 }

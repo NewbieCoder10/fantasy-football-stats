@@ -11,7 +11,8 @@ import com.khasianowebb.fantasyfootballstats.R;
 
 /**
  * A simple {@link Fragment} subclass. Use the {@link PlayersFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * create an instance of this fragment. This is used to link the information that will be printed on
+ * the screen about the player; Using a spinner, and a scrollview.
  */
 public class PlayersFragment extends Fragment {
 

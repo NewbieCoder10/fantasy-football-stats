@@ -9,7 +9,8 @@ import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
 /**
- * The type Login activity.
+ * The type Login activity involves the Google sign-in service, you will need your credentials,
+ * to sign-in this is for the login page.
  */
 public class LoginActivity extends AppCompatActivity {
   private static final int LOGIN_REQUEST_CODE = 1000;

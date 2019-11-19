@@ -5,7 +5,8 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.khasianowebb.fantasyfootballstats.R;
 
 /**
- * The type Settings fragment.
+ * The type Settings fragments extends the PreferenceFragmentCompat activity, this
+ * links to the root_preferences.
  */
 public class SettingsFragment extends PreferenceFragmentCompat {
 
