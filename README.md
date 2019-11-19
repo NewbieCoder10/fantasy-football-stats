@@ -36,19 +36,14 @@ or the player. I need to make sure that the app is able to communicate with the
 information that the user is entering. As it is known so far, there are no bugs within my app.
 I am trying to get the app to where, I can click on the players tab and have players shown. 
 
+* Change the Main Color of the app, via settings.
+* Change the Background-Color of the app, via settings.
+* Change the font-type style of the app.
 
-* I could possible work on the colors if I decide to change them, although I do like the
-current color of the app up to this point. I could try to update the font possibly if I can
-figure out what to do within my app.
-
-
-* I might try to create more things that are more fragments if needed within
-my project.
- 
- 
-* I would be able to create more within the database, if I could and also
-had the free API resources to do so.
-
+* ###Stretch Goals
+* I could possible work on the colors if I decide to change them.
+* I could possible update the font height when needed/wanted.
+* Changing the app to shift when the landscape of the phone is turned.
 
 ## Data Model Implementation
 * [Implementation](docs/datamodelimplementation.md)
@@ -134,16 +129,9 @@ implementation 'androidx.appcompat:appcompat:1.1.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
-    
-    
-    
-    
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'   
      
 ## Javadoc-generated technical documentation
-[Javadoc-generated](file:///C:/Users/Khasiano/Desktop/bootcamp/projects/fantasy-football-stats/docs/api/index.html)
-
 
 
 
