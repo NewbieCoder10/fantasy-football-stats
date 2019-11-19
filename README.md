@@ -40,7 +40,7 @@ I am trying to get the app to where, I can click on the players tab and have pla
 * Change the Background-Color of the app, via settings.
 * Change the font-type style of the app.
 
-* ### Stretch Goals
+* Stretch Goals
 * I could possible work on the colors if I decide to change them.
 * I could possible update the font height when needed/wanted.
 * Changing the app to shift when the landscape of the phone is turned.
