@@ -5,7 +5,7 @@ import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import java.util.List;
 
 /**
- * The type Players response.
+ * The type Players response from the public class PlayersResponse.
  */
 public class PlayersResponse {
 
@@ -13,18 +13,18 @@ public class PlayersResponse {
   private List<Player> players;
 
   /**
-   * Gets players.
+   * Gets players from the public List of getPlayers.
    *
-   * @return the players
+   * @return the players from teh public List of getPlayers.
    */
   public List<Player> getPlayers() {
     return players;
   }
 
   /**
-   * Sets players.
+   * Sets players from the public void of setPlayers with a List of players.
    *
-   * @param players the players
+   * @param players the players from the public void of setPlayers with a List of players.
    */
   public void setPlayers(List<Player> players) {
     this.players = players;

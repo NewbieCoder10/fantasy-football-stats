@@ -5,6 +5,9 @@ import com.facebook.stetho.Stetho;
 import com.khasianowebb.fantasyfootballstats.service.FantasyFootballStatsDatabase;
 import com.khasianowebb.fantasyfootballstats.service.GoogleSignInService;
 
+/**
+ * The type Fantasy football stats application extends Application.
+ */
 public class FantasyFootballStatsApplication extends Application {
 
   @Override

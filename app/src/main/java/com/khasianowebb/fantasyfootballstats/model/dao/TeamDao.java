@@ -53,7 +53,7 @@ public interface TeamDao {
   /**
    * Gets all teams.
    *
-   * @return the all teams
+   * @return the all teams from the LiveData to getAllTeams.
    */
   @Query("SELECT * FROM Team")
   LiveData<List<Team>> getAllTeams();
@@ -61,8 +61,8 @@ public interface TeamDao {
   /**
    * Update int.
    *
-   * @param team the team
-   * @return the int
+   * @param team the team int is updated.
+   * @return the int on an update of a Team, team.
    */
   @Update
   int update(Team team);
@@ -71,7 +71,7 @@ public interface TeamDao {
    * Delete int.
    *
    * @param teams the teams
-   * @return the int
+   * @return the int of delete of team, teams.
    */
   @Delete
   int delete(Team... teams);

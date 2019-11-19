@@ -34,45 +34,45 @@ public class GoogleSignInService {
   }
 
   /**
-   * Sets application context.
+   * Sets application context with public static void setApplication.
    *
-   * @param applicationContext the application context
+   * @param applicationContext the application context with public static void setApplication.
    */
   public static void setApplicationContext(Application applicationContext) {
     GoogleSignInService.applicationContext = applicationContext;
   }
 
   /**
-   * Gets instance.
+   * Gets instance of the public static GoogleSignInService for getInstance.
    *
-   * @return the instance
+   * @return the instance of the public static GoogleSignInService for getInstance.
    */
   public static GoogleSignInService getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
   /**
-   * Gets account.
+   * Gets account of the public LiveData with GoogleSignInAccount.
    *
-   * @return the account
+   * @return the account of the public LiveData with GoogleSignInAccount.
    */
   public LiveData<GoogleSignInAccount> getAccount() {
     return account;
   }
 
   /**
-   * Gets exception.
+   * Gets exception of public LiveData with exception.
    *
-   * @return the exception
+   * @return the exception of public LiveData with exception.
    */
   public LiveData<Exception> getException() {
     return exception;
   }
 
   /**
-   * Refresh task.
+   * Refresh task of the public GoogleSignInAccount with refresh.
    *
-   * @return the task
+   * @return the task of the public GoogleSignInAccount with refresh.
    */
   public Task<GoogleSignInAccount> refresh() {
     return client.silentSignIn()
@@ -91,10 +91,10 @@ public class GoogleSignInService {
   }
 
   /**
-   * Starts sign in.
+   * Starts GoogleSignIn activity.
    *
-   * @param activity    the activity
-   * @param requestCode the request code
+   * @param activity    the activity of the GoogleSignIn is taking place.
+   * @param requestCode the request code of the startActivity is done.
    */
   public void startsSignIn(Activity activity, int requestCode) {
     update((GoogleSignInAccount) null);
@@ -103,10 +103,10 @@ public class GoogleSignInService {
   }
 
   /**
-   * Complete sign in task.
+   * Complete the GoogleSignIn task.
    *
-   * @param data the data
-   * @return the task
+   * @param data the data for the complete SignIn.
+   * @return the task of GoogleSignIn done so.
    */
   public Task<GoogleSignInAccount> completeSignIn(Intent data) {
     Task<GoogleSignInAccount> task = null;
@@ -120,9 +120,9 @@ public class GoogleSignInService {
   }
 
   /**
-   * Sign out task.
+   * The GoogleSignOut task is started at this point.
    *
-   * @return the task
+   * @return the task of the GoogleSignOut is taking place.
    */
   public Task<Void> signOut() {
     return client.signOut()

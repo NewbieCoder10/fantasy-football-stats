@@ -18,7 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * The type Fantasy football stats database.
+ * The type Fantasy football stats database is populated with the Teams, and Players.
  */
 @Database(
     entities = {Player.class, Team.class}, version = 1,
@@ -28,40 +28,42 @@ import java.util.List;
 public abstract class FantasyFootballStatsDatabase extends RoomDatabase {
 
   /**
-   * Instantiates a new Fantasy football stats database.
+   * Instantiates a new Fantasy football stats database that was created with the populated data.
    */
   protected FantasyFootballStatsDatabase() {}
 
   private static Application applicationContext;
 
   /**
-   * Gets player dao.
+   * Gets player dao from the public abstract PlayerDao to getPlayerDao.
    *
-   * @return the player dao
+   * @return the player dao from the public abstract PlayerDao to getPlayerDao.
    */
   public abstract PlayerDao getPlayerDao();
 
   /**
-   * Gets team dao.
+   * Gets team dao from the public abstract TeamDao, to getTeamDao.
    *
-   * @return the team dao
+   * @return the team dao from the public abstract TeamDao, to getTeamDao.
    */
   public abstract TeamDao getTeamDao();
 
 
   /**
-   * Sets application context.
+   * Sets application context from the public static void setUpApplication.
    *
-   * @param applicationContext the application context
+   * @param applicationContext the application context from the public static void setUpApplication.
    */
   public static void setApplicationContext(Application applicationContext) {
     FantasyFootballStatsDatabase.applicationContext = applicationContext;
   }
 
   /**
-   * Get instance fantasy football stats database.
+   * Get instance fantasy football stats database from the public static FantasyFootballStatsDatabase
+   * getInstance.
    *
-   * @return the fantasy football stats database
+   * @return the fantasy football stats database from the public static FantasyFootballStatsDatabase
+   * getInstance.
    */
   public static FantasyFootballStatsDatabase getInstance(){
     return InstanceHolder.INSTANCE;

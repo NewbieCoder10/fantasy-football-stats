@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The type Player.
+ * The type Player entity.
  */
 @Entity(
     foreignKeys = {
@@ -50,144 +50,144 @@ public class Player {
   private String college;
 
   /**
-   * Gets id.
+   * Gets id of the public long getId
    *
-   * @return the id
+   * @return the id of the public long id.
    */
   public long getId() {
     return id;
   }
 
   /**
-   * Sets id.
+   * Sets id of the long.
    *
-   * @param id the id
+   * @param id the id of the public void id.
    */
   public void setId(long id) {
     this.id = id;
   }
 
   /**
-   * Gets team id.
+   * Gets team id from the public Long getTeamId
    *
-   * @return the team id
+   * @return the team id of the public Long return, the id.
    */
   public Long getTeamId() {
     return teamId;
   }
 
   /**
-   * Sets team id.
+   * Sets team id of the setTeamId.
    *
-   * @param teamId the team id
+   * @param teamId the team id of the public void, setTeamId,
    */
   public void setTeamId(Long teamId) {
     this.teamId = teamId;
   }
 
   /**
-   * Gets temp team.
+   * Gets temp team from the @String getTempTeam.
    *
-   * @return the temp team
+   * @return the @String for the getTempTeam.
    */
   public String getTempTeam() {
     return tempTeam;
   }
 
   /**
-   * Sets temp team.
+   * Sets temp team, from the public void setTempTeam.
    *
-   * @param tempTeam the temp team
+   * @param tempTeam the temp team from the public void setTempTeam.
    */
   public void setTempTeam(String tempTeam) {
     this.tempTeam = tempTeam;
   }
 
   /**
-   * Gets jersey.
+   * Gets @String jersey for the player.
    *
-   * @return the jersey
+   * @return the @String jersey for the player.
    */
   public String getJersey() {
     return jersey;
   }
 
   /**
-   * Sets jersey.
+   * Sets jersey from the public void setJersey method.
    *
-   * @param jersey the jersey
+   * @param jersey the jersey from public void, setJersey method.
    */
   public void setJersey(String jersey) {
     this.jersey = jersey;
   }
 
   /**
-   * Gets last name.
+   * Gets last name from the @String of getLastName.
    *
-   * @return the last name
+   * @return the last name from the @String of getLastName.
    */
   public String getLastName() {
     return lastName;
   }
 
   /**
-   * Sets last name.
+   * Sets last name from the public void setLastName.
    *
-   * @param lastName the last name
+   * @param lastName the last name from public void setNameName.
    */
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
   /**
-   * Gets first name.
+   * Gets first name from the @String of getFirstName.
    *
-   * @return the first name
+   * @return the first name from the public @String getFirstName.
    */
   public String getFirstName() {
     return firstName;
   }
 
   /**
-   * Sets first name.
+   * Sets first name from the public void setFirstName.
    *
-   * @param firstName the first name
+   * @param firstName the first name of the public void setFirstName.
    */
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
   /**
-   * Gets position.
+   * Gets position from the @String of getPosition.
    *
-   * @return the position
+   * @return the position from the @String of getPosition.
    */
   public String getPosition() {
     return position;
   }
 
   /**
-   * Sets position.
+   * Sets position from the public void setPosition.
    *
-   * @param position the position
+   * @param position the position from the public void setPosition.
    */
   public void setPosition(String position) {
     this.position = position;
   }
 
   /**
-   * Gets college.
+   * Gets college from the @String of getCollege.
    *
-   * @return the college
+   * @return the college @String of the getCollege.
    */
   public String getCollege() {
     return college;
   }
 
   /**
-   * Sets college.
+   * Sets college from the public void, setCollege.
    *
-   * @param college the college
+   * @param college the college from public void, setCollege.
    */
   public void setCollege(String college) {
     this.college = college;

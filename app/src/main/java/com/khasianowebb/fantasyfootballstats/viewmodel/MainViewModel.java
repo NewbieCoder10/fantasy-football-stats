@@ -17,7 +17,7 @@ import com.khasianowebb.fantasyfootballstats.service.FantasyFootballStatsDatabas
 import java.util.List;
 
 /**
- * The type Main view model.
+ * The type Main view model extends AndroidViewModel with the public class.
  */
 public class MainViewModel extends AndroidViewModel {
 
@@ -36,9 +36,10 @@ public class MainViewModel extends AndroidViewModel {
   private SearchData searchData = new SearchData(teamId, nameSearch);
 
   /**
-   * Instantiates a new Main view model.
+   * Instantiates a new Main view model with the public, and also @NonNull Application.
    *
-   * @param application the application
+   * @param application the application with a new Main view model with the public,
+   * and also @NonNull Application.
    */
   public MainViewModel(@NonNull Application application) {
     super(application);
@@ -98,4 +99,3 @@ public class MainViewModel extends AndroidViewModel {
   }
 
 }
-// TODO Add method to get live data thats a list of teams, and a method for a specified team and part of a players name
