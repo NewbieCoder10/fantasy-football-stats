@@ -1,3 +1,10 @@
+###### Developed by: [Khasiano Webb](https://github.com/NewbieCoder10) 
+
+###### Contact Information: 
+[khasianow@yahoo.com](https://mail.yahoo.com/d/folders/1)
+
+[LinkedIn Profile](https://www.linkedin.com/in/khasiano-webb/)
+
 ## [GitHub](https://newbiecoder10.github.io/fantasy-football-stats/)
 
 ## [Repository](https://github.com/NewbieCoder10/fantasy-football-stats)
