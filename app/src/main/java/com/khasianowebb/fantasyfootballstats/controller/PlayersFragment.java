@@ -56,6 +56,11 @@ public class PlayersFragment extends Fragment {
     // Inflate the layout for this fragment
     View view = inflater.inflate(R.layout.fragment_players, container, false);
     playerList = view.findViewById(R.id.player_list);
+    playerList.setOnItemClickListener((adapterView, v, position, l) -> {
+      Player player = (Player)adapterView.getItemAtPosition(position);
+      PlayerInfoFragment fragment = PlayerInfoFragment.newInstance(player.getId());
+      fragment.show(getFragmentManager(), fragment.getClass().getSimpleName());
+    });
     playerSearch = view.findViewById(R.id.player_search);
     playerSearch.setOnQueryTextListener(new OnQueryTextListener() {
       @Override
