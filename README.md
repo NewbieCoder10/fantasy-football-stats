@@ -39,18 +39,18 @@ for anyone who has an interest in football.
 
 
 ## Summary of current state of the app
-* The current state of the completion of my app so far is that it runs and allows the
-user to use Google Sign-In to access the app. Also I have the main-fragment that the user
-will be able to click on the team or player tab and print the information of the team
-or the player. I need to make sure that the app is able to communicate with the 
-information that the user is entering. As it is known so far, there are no bugs within my app.
-I am trying to get the app to where, I can click on the players tab and have players shown. 
+* The current state of the completion of my app so far is it is fully functional; The
+app runs and allows the user to use Google Sign-In to access the app. Also I have the
+main-fragment that the user will be able to click on the team and it shows a list of 
+players for that team. You can click on the player tab and print the information for that player.
+So far, there are no bugs within my app.
 
+#### Aesthetic/Cosmetic Improvements that I think would improve my app.
 * Change the Main Color of the app, via settings.
 * Change the Background-Color of the app, via settings.
 * Change the font-type style of the app.
 
-* Stretch Goals
+#### Stretch Goals
 * I could possible work on the colors if I decide to change them.
 * I could possible update the font height when needed/wanted.
 * Changing the app to shift when the landscape of the phone is turned.
