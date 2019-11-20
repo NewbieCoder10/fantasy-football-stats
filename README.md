@@ -2,7 +2,6 @@
 
 ###### Contact Information: 
 [khasianow@yahoo.com](https://mail.yahoo.com/d/folders/1)
-
 [LinkedIn Profile](https://www.linkedin.com/in/khasiano-webb/)
 
 ## [GitHub](https://newbiecoder10.github.io/fantasy-football-stats/)

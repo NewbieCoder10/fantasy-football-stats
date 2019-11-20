@@ -2,6 +2,8 @@ package com.khasianowebb.fantasyfootballstats.controller;
 
 
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
@@ -12,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 import com.khasianowebb.fantasyfootballstats.R;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
 import com.khasianowebb.fantasyfootballstats.viewmodel.MainViewModel;
@@ -48,6 +52,12 @@ public class TeamsFragment extends Fragment {
     // Inflate the layout for this fragment
     View view = inflater.inflate(R.layout.fragment_teams, container, false);
     teamList = view.findViewById(R.id.team_list);
+    teamList.setOnItemClickListener((adapterView, v, position, l) -> {
+      Team team = (Team) adapterView.getItemAtPosition(position);
+      Bundle args = new Bundle();
+      args.putLong("team_id", team.getId());
+      Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.player_fragment, args);
+    });
     return view;
   }
 

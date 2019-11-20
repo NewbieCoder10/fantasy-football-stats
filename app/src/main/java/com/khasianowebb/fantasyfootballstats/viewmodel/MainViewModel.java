@@ -14,6 +14,7 @@ import com.khasianowebb.fantasyfootballstats.model.entity.Player;
 import com.khasianowebb.fantasyfootballstats.model.entity.Team;
 import com.khasianowebb.fantasyfootballstats.model.pojo.TeamWithPlayers;
 import com.khasianowebb.fantasyfootballstats.service.FantasyFootballStatsDatabase;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -48,8 +49,16 @@ public class MainViewModel extends AndroidViewModel {
         .switchMap(teamId, (id) -> database.getTeamDao().getByTeamIdWithPlayers(id));
     player = Transformations.switchMap(playerId, (id) -> database.getPlayerDao().getByPlayerId(id));
     searchPlayers = Transformations.switchMap(searchData, (data) -> {
-      return (data.first == null) ? database.getPlayerDao().search(data.second)
-          : database.getPlayerDao().search(data.first, data.second);
+      if (data.first == null && (data.second == null || data.second.trim().isEmpty())) {
+        return new MutableLiveData<List<Player>>(Collections.EMPTY_LIST);
+      }
+      if (data.first == null) {
+        return database.getPlayerDao().search(data.second);
+      }
+      if (data.second == null) {
+        return database.getPlayerDao().search(data.first);
+      }
+      return database.getPlayerDao().search(data.first, "%" + data.second + "%");
     });
   }
 

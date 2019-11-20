@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import com.google.gson.annotations.SerializedName;
 
 
 /**
@@ -21,9 +22,13 @@ public class  Team {
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "team_id")
   private long id;
+
+  @SerializedName("code")
   private String abbreviation;
+
   @ColumnInfo(name ="full_name")
   private String fullName;
+
   @ColumnInfo(name = "short_name")
   private String shortName;
 

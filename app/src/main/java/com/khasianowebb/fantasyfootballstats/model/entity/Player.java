@@ -30,6 +30,7 @@ public class Player {
   private Long teamId;
 
   @Ignore
+  @SerializedName("team")
   private String tempTeam;
 
   @ColumnInfo(index = true)
@@ -191,5 +192,10 @@ public class Player {
    */
   public void setCollege(String college) {
     this.college = college;
+  }
+
+  @Override
+  public String toString() {
+    return lastName + ", " + firstName;
   }
 }

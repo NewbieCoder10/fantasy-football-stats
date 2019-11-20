@@ -59,6 +59,10 @@ public interface PlayerDao {
   @Query("SELECT * FROM Player WHERE team_id = :teamId AND (first_name LIKE :namePart OR last_name LIKE :namePart) ORDER BY last_name, first_name")
   LiveData<List<Player>> search(long teamId, String namePart);
 
+  @Query("SELECT * FROM Player WHERE team_id = :teamId ORDER BY last_name, first_name")
+  LiveData<List<Player>> search(long teamId);
+
+
   /**
    * Update int from the player, player.
    *
