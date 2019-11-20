@@ -150,7 +150,7 @@ implementation 'androidx.appcompat:appcompat:1.1.0'
  
     
 ## Javadoc-generated technical documentation
-[Javadoc](api/overview-summary.html)
+[Javadoc](docs/api/overview-summary.html)
 
 
 ## Copyright & licenses
