@@ -150,7 +150,7 @@ implementation 'androidx.appcompat:appcompat:1.1.0'
  
     
 ## Javadoc-generated technical documentation
-[Javadoc](file:///C:/Users/Khasiano/Desktop/bootcamp/projects/fantasy-football-stats/docs/api/index.html)
+[Javadoc](api/overview-summary.html)
 
 
 ## Copyright & licenses
